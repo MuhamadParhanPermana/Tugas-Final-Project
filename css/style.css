@@ -9,10 +9,11 @@
 
 body {
     font-family: 'Josefin Sans', sans-serif;
-    background-color: rgb(30,30,32);
+    background-color: rgb(30, 30, 32);
 }
 
 /* Navigation */
+
 nav {
     display: flex;
     flex-direction: column;
@@ -58,7 +59,7 @@ nav ul li a i {
 
 .judul1 {
     font-family: 'Allura', cursive;
-    color: rgb(82,111,115);
+    color: rgb(82, 111, 115);
     font-size: 40px;
     margin-bottom: 40px;
 }
@@ -69,6 +70,8 @@ nav ul li a i {
     font-size: 40px;
     margin-bottom: 40px;
 }
+
+/* Content */
 
 #content {
     padding: 8px;
@@ -81,10 +84,11 @@ nav ul li a i {
     color: white;
     padding: 10px;
     justify-content: center;
-    background-color: rgb(35,38,45);
+    background-color: rgb(35, 38, 45);
 }
 
 /* Header */
+
 #header {
     display: flex;
     padding-top: 100px;
@@ -94,9 +98,9 @@ nav ul li a i {
 #header img {
     height: 120px;
     border-radius: 100%;
-    border-color: rgb(30,30,32);
-    border-style:solid;
-	border-width: 10px;
+    border-color: rgb(30, 30, 32);
+    border-style: solid;
+    border-width: 10px;
 }
 
 #header h3 {
@@ -110,7 +114,7 @@ nav ul li a i {
     color: white;
     padding: 8px;
     width: max-content;
-    background-color: rgb(35,38,45);
+    background-color: rgb(35, 38, 45);
     margin-left: 15px;
     margin-top: 22px;
 }
@@ -120,6 +124,7 @@ nav ul li a i {
 }
 
 /* Body */
+
 #body-content {
     display: flex;
     padding: 8px;
@@ -128,7 +133,7 @@ nav ul li a i {
 #body-content-pf {
     display: grid;
     position: relative;
-    grid-template-columns: repeat(8,1fr);
+    grid-template-columns: repeat(8, 1fr);
     padding: 10px;
 }
 
@@ -143,8 +148,15 @@ nav ul li a i {
     padding: 8px;
 }
 
-.bg-life, .skill, .hobby, .sosmed, .data, .pendidikan, .kemampuan {
-    background-color: rgb(35,38,45);
+.bg-life,
+.skill,
+.hobby,
+.sosmed,
+.data,
+.pendidikan,
+.kemampuan,
+.about {
+    background-color: rgb(35, 38, 45);
     padding: 16px;
     padding-left: 32px;
     margin: 8px;
@@ -152,11 +164,26 @@ nav ul li a i {
     color: white;
 }
 
-.bg-life h4, .skill h4, .hobby h4, .sosmed h4, .data h4, .pendidikan h4 , .kemampuan h4 {
+.sosmed ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.about ul li {
+    margin: 20px;
+}
+
+.bg-life h4,
+.skill h4,
+.hobby h4,
+.sosmed h4,
+.data h4,
+.pendidikan h4,
+.kemampuan h4 {
     margin-top: 8px;
     margin-left: -8px;
     margin-bottom: 16px;
-    color: rgb(82,111,115);
+    color: rgb(82, 111, 115);
 }
 
 .data table tr td {
@@ -174,12 +201,13 @@ nav ul li a i {
 .card-header {
     padding: 20px;
     width: 200px;
-    background-color: rgb(35,38,45);
+    background-color: rgb(35, 38, 45);
     color: white;
 }
 
 .card-header img {
-    width: 100%;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
 }
 
@@ -187,7 +215,7 @@ nav ul li a i {
     padding: 20px;
     width: 200px;
     margin-top: 10px;
-    background-color: rgb(35,38,45);
+    background-color: rgb(35, 38, 45);
     color: white;
 }
 
@@ -196,16 +224,63 @@ nav ul li a i {
     margin-bottom: 20px;
 }
 
-.card-body button a {
-    text-decoration: none;
-    color: white;
-    margin-top: 20px;
+.btn-portf {
+    background-color: white;
+    padding: 8px;
     width: 100%;
-    padding: 10px;
-    background-color: rgb(55,62,68);
 }
 
-.card-body button a:hover {
-    background-color: white;
+.btn-portf a {
+    text-decoration: none;
     color: black;
+    font-weight: 600;
 }
+
+/* pc small */
+
+@media screen and (max-width: 992px) {
+    nav {
+        flex-direction: row;
+        background-color: rgb(23, 23, 23);
+        width: 100%;
+        height: 20px;
+        padding-top: 5px;
+        padding-right: 35px;
+        padding-left: 30px;
+        padding-bottom: 35px;
+    }
+
+    nav ul {
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 4px;
+        color: rgb(134, 143, 150);
+        font-size: 15px;
+        text-decoration: none;
+        transition: .4s;
+    }
+
+    nav ul li a i {
+        margin-right: 10px;
+        size: 10px;
+    }
+
+    #content {
+        margin-left: 10px;
+    }
+}
+
+/* tablet */
+
+@media screen and (max-width: 768px){
+}
+
+/* Mobile */
+
+@media screen and (max-width: 576px) {}
