@@ -1,29 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        #content {
+            margin-right: 20px !important;
+            margin-left: 260px !important;
+            padding-top: 100px;
+            background-color: rgb(35, 38, 45) !important;
+        }
+
+        #header {
+            display: flex !important;
+            padding-top: 20px !important;
+            padding-left: 40px !important;
+        }
+
+        #header img {
+            height: 70px !important;
+            border-radius: 100% !important;
+        }
+
+        #header h3 {
+            margin-left: 15px;
+            margin-top: 25px;
+        }
+
+        #header p {
+            padding: 8px;
+            margin-left: 8px;
+            margin-top: 2px;
+        }
+
+        #body-content {
+            margin: 20px;
+            background-color: rgb(30, 30, 32);
+            color: white;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        #body-content-pf {
+            grid-template-columns: repeat(16, 1fr);
+        }
+    </style>
 </head>
+
 <body>
     <nav>
+        <div class="judul">
+            <h1 class="judul1">Port</h1>
+            <h1 class="judul2">folio</h1>
+        </div>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a></li>
+            <li><a href="portfolio.html"><i class="	fa fa-drivers-license-o"></i>Portfolio</a></li>
+            <li><a href="blog.html"><i class="fa fa-clone"></i>Blog</a></li>
+            <li><a href="team.html"><i class="fa fa-group"></i>Team</a></li>
+            <li><a href="#" class="active"><i class="fa fa-envelope"></i>Contact</a></li>
+            <li><a href="about.html"><i class="fa fa-info-circle"></i>About</a></li>
         </ul>
     </nav>
-    <div class="header">
-    </div>
-    <div class="body">
-    </div>
-    <div class="footer">
+    <div id="content">
+        <div id="body-content-pf">
+            <div class="card">
+                <div class="card-header" style="background-color: rgb(30,30,32); width: 90px">
+                    <img src="images/photo.jpg" style="border-radius: 100%;">
+                    <h4 style="margin-top: 20px; justify-content: center;">Muhammad Zidan Firjatullah</h4>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" style="background-color: rgb(30,30,32); width: 90px">
+                    <img src="images/photo.jpg" style="border-radius: 100%;">
+                    <h4 style="margin-top: 20px; justify-content: center;">Muhammad Zidan Firjatullah</h4>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+        </div>
     </div>
     <script src="js/script.js"></script>
 </body>
+
 </html>

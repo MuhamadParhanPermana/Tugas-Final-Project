@@ -1,29 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        body {
+            background-image: url(images/background.jpg) !important;
+            background-repeat: repeat-x !important;
+        }
+    </style>
 </head>
+
 <body>
     <nav>
+        <div class="judul">
+            <h1 class="judul1">Port</h1>
+            <h1 class="judul2">folio</h1>
+        </div>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#" class="active"><i class="fa fa-fw fa-home"></i>Home</a></li>
+            <li><a href="portfolio.html"><i class="	fa fa-drivers-license-o"></i>Portfolio</a></li>
+            <li><a href="blog.html"><i class="fa fa-clone"></i>Blog</a></li>
+            <li><a href="team.html"><i class="fa fa-group"></i>Team</a></li>
+            <li><a href="contact.html"><i class="fa fa-envelope"></i>Contact</a></li>
+            <li><a href="about.html"><i class="fa fa-info-circle"></i>About</a></li>
         </ul>
     </nav>
-    <div class="header">
-    </div>
-    <div class="body">
-    </div>
-    <div class="footer">
+    <div id="content">
+        <div id="header">
+            <img src="images/photo.jpg">
+            <div>
+                <h3>Muhamad Parhan Permana</h3>
+                <div class="bio">
+                    <p>Android Developer</p>
+                    <p>Front-End Web Developer</p>
+                </div>
+            </div>
+        </div>
+        <div id="body-content">
+            <div class="body-content-1">
+                <div class="bg-life">
+                    <h4>Tentang saya</h4>
+                    <p>Saya adalah seseorang yang senang dengan dunia teknologi informatika, oleh sebab itu saya
+                        mempelajari lebih dalam mengenai programing. Hal-hal yang telah saya pelajari adalah Front-End
+                        Web Developer dan juga Android Developer.</p>
+                </div>
+                <div class="skill">
+                    <ul>
+                        <h4>Skill</h4>
+                        <li>Java</li>
+                        <li>Kotlin</li>
+                        <li>Html</li>
+                        <li>Css</li>
+                        <li>Javascript</li>
+                    </ul>
+                </div>
+                <div class="hobby">
+                    <ul>
+                        <h4>Hobby</h4>
+                        <li>Badminton</li>
+                        <li>Camping</li>
+                    </ul>
+                </div>
+                <div class="sosmed">
+                    <ul>
+                        <h4>Sosial Media</h4>
+                        <li>WhatsApp</li>
+                        <li>Instagram</li>
+                        <li>Telegram</li>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="body-content-2">
+                <div class="data">
+                    <table>
+                        <h4>Data Pribadi</h4>
+                        <tr>
+                            <td>Nama</td>
+                            <td>Muhamad Parhan Permana</td>
+                        </tr>
+                        <tr>
+                            <td>Tempat, Tanggal Lahir</td>
+                            <td>Bandung, 19 April 2002</td>
+                        </tr>
+                        <tr>
+                            <td>Alamat</td>
+                            <td>Kp. Sukamaju RT02/RW06, Kec. Padalarang, Kab. Bandung barat, Jawa barat, 40553.</td>
+                        </tr>
+                        <tr>
+                            <td>No. HP</td>
+                            <td>+62 85158190402</td>
+                        </tr>
+                        <tr>
+                            <td>Jenis Kelamin</td>
+                            <td>Laki-laki</td>
+                        </tr>
+                        <tr>
+                            <td>Agama</td>
+                            <td>Islam</td>
+                        </tr>
+                        <tr>
+                            <td>Kewarganegaraan</td>
+                            <td>Indonesia</td>
+                        </tr>
+                        <tr>
+                            <td>Status</td>
+                            <td>Belum Menikah</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>muhamadparhanpermana71@gmail.com</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="pendidikan">
+                    <ul>
+                        <h4>Pendidikan</h4>
+                        <li>SD Negeri Sukamaju</li>
+                        <li>SMP Negeri 3 Padalarang</li>
+                        <li>SMK Negeri 4 Padalarang</li>
+                    </ul>
+                </div>
+                <div class="kemampuan">
+                    <ul>
+                        <h4>Kemampuan</h4>
+                        <li>Android Studio</li>
+                        <li>Sublime Text</li>
+                        <li>Visual Studio Code</li>
+                        <li>Xampp</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+        </div>
     </div>
     <script src="js/script.js"></script>
 </body>
+
 </html>

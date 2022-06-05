@@ -1,50 +1,211 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Josefin Sans', sans-serif;
     background-color: rgb(30,30,32);
 }
 
 /* Navigation */
 nav {
-    background-color: rgb(23,23,23);
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(23, 23, 23);
     position: fixed;
-    width: max-content;
+    width: 170px;
     height: 100%;
     padding-top: 25px;
     padding-right: 35px;
-    padding-left: 35px;
+    padding-left: 30px;
     padding-bottom: 35px;
 }
 
-nav h1 {
-    font-family: 'Allura', cursive;
-    color: white;
-    font-size: 40px;
-    margin-bottom: 50px;
-}
-
-nav ul {
-	list-style: none;
-}
-
 nav ul li {
+    list-style: none;
+    margin: 10px;
+}
+
+nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    color: rgb(134, 143, 150);
+    font-size: 15px;
+    text-decoration: none;
+    transition: .4s;
+}
+
+nav ul li a:hover,
+nav a.active {
+    padding-left: 16px;
+    color: rgb(142, 195, 236);
+}
+
+nav ul li a i {
+    margin-right: 20px;
+    size: 15px;
+}
+
+.judul {
     display: flex;
 }
 
-nav ul li a {  	
-	width: 100px;
-    color: rgb(134, 143, 150); 
-    display: flex; 
-    padding: 2px;
-    margin: 5px;
-    text-align: center; 
-    font-size: 20px
+.judul1 {
+    font-family: 'Allura', cursive;
+    color: rgb(82,111,115);
+    font-size: 40px;
+    margin-bottom: 40px;
 }
- 
-nav ul li a:hover {
-    color: rgb(142, 195, 236);
+
+.judul2 {
+    font-family: 'Allura', cursive;
+    color: white;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+#content {
+    padding: 8px;
+    margin-left: 238px;
+}
+
+#content h2 {
+    display: flex;
+    font-size: 25px;
+    color: white;
+    padding: 10px;
+    justify-content: center;
+    background-color: rgb(35,38,45);
+}
+
+/* Header */
+#header {
+    display: flex;
+    padding-top: 100px;
+    padding-left: 40px;
+}
+
+#header img {
+    height: 120px;
+    border-radius: 100%;
+    border-color: rgb(30,30,32);
+    border-style:solid;
+	border-width: 10px;
+}
+
+#header h3 {
+    color: white;
+    margin-left: 15px;
+    margin-top: 30px;
+}
+
+#header p {
+    flex-direction: row;
+    color: white;
+    padding: 8px;
+    width: max-content;
+    background-color: rgb(35,38,45);
+    margin-left: 15px;
+    margin-top: 22px;
+}
+
+.bio {
+    display: flex;
+}
+
+/* Body */
+#body-content {
+    display: flex;
+    padding: 8px;
+}
+
+#body-content-pf {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(8,1fr);
+    padding: 10px;
+}
+
+.body-content-1 {
+    flex: 1;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.body-content-2 {
+    flex: 2;
+    padding: 8px;
+}
+
+.bg-life, .skill, .hobby, .sosmed, .data, .pendidikan, .kemampuan {
+    background-color: rgb(35,38,45);
+    padding: 16px;
+    padding-left: 32px;
+    margin: 8px;
+    margin-top: 25px;
+    color: white;
+}
+
+.bg-life h4, .skill h4, .hobby h4, .sosmed h4, .data h4, .pendidikan h4 , .kemampuan h4 {
+    margin-top: 8px;
+    margin-left: -8px;
+    margin-bottom: 16px;
+    color: rgb(82,111,115);
+}
+
+.data table tr td {
+    padding: 5px;
+}
+
+.card {
+    width: 100%;
+    height: auto;
+    grid-column: span 2;
+    margin: 10px 0;
+    position: relative;
+}
+
+.card-header {
+    padding: 20px;
+    width: 200px;
+    background-color: rgb(35,38,45);
+    color: white;
+}
+
+.card-header img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+    width: 200px;
+    margin-top: 10px;
+    background-color: rgb(35,38,45);
+    color: white;
+}
+
+.card-body h4 {
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+.card-body button a {
+    text-decoration: none;
+    color: white;
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(55,62,68);
+}
+
+.card-body button a:hover {
+    background-color: white;
+    color: black;
 }

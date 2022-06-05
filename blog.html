@@ -1,29 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        #content {
+            margin-right: 20px !important;
+            margin-left: 260px !important;
+            background-color: rgb(35, 38, 45) !important;
+        }
+
+        #header {
+            display: flex !important;
+            padding-top: 20px !important;
+            padding-left: 40px !important;
+        }
+
+        #header img {
+            height: 70px !important;
+            border-radius: 100% !important;
+        }
+
+        #header h3 {
+            margin-left: 15px;
+            margin-top: 25px;
+        }
+
+        #header p {
+            padding: 8px;
+            margin-left: 8px;
+            margin-top: 2px;
+        }
+
+        #body-content {
+            margin: 20px;
+            background-color: rgb(30,30,32);
+            color: white;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        #body-content p {
+            margin: 20px;
+        }
+
+        #body-content img {
+            margin-right: 200px;
+            margin-left: 200px;
+        }
+    </style>
 </head>
+
 <body>
     <nav>
+        <div class="judul">
+            <h1 class="judul1">Port</h1>
+            <h1 class="judul2">folio</h1>
+        </div>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a></li>
+            <li><a href="portfolio.html"><i class="	fa fa-drivers-license-o"></i>Portfolio</a></li>
+            <li><a href="#" class="active"><i class="fa fa-clone"></i>Blog</a></li>
+            <li><a href="team.html"><i class="fa fa-group"></i>Team</a></li>
+            <li><a href="contact.html"><i class="fa fa-envelope"></i>Contact</a></li>
+            <li><a href="about.html"><i class="fa fa-info-circle"></i>About</a></li>
         </ul>
     </nav>
-    <div class="header">
-    </div>
-    <div class="body">
-    </div>
-    <div class="footer">
+    <div id="content">
+        <div id="header">
+            <img src="images/photo.jpg">
+            <div>
+                <h3>Alex Benzer</h3>
+                <div class="bio">
+                    <p>May 16, 2022</p>
+                </div>
+            </div>
+        </div>
+        <div id="body-content">
+            <h2>Listen to stories anytime, anywhere. Audio is now on iOS.</h2>
+            <p>Today, following the success of audio on the Medium website, we’re rolling out the feature to our iOS app. Making it easy to soak up new ideas is the heart of Medium’s mission — and now that’s more convenient than ever. Just grab your iPhone, hit the Listen button, and multi-task away (or kick back on your couch, we won’t judge).</p>
+            <img src="images/blog.gif">
+            <p>We’ve been blown away by your enthusiasm since we introduced audio a little over a month ago. We’ve learned a lot, too. Writers continue to use audio to proofread their stories, while readers can breeze through their reading lists as they listen at work or around the house. We’ve also heard from readers who find listening to be an easier way to absorb information. Now, they can take that same experience on the go with the improved iPhone app.</p>
+            <p>The new Listen feature on mobile and desktop is powered in part by AI text-to-speech technology from our friends at Speechify. We aim to continue working with them to expand audio on Medium: that means introducing new product experiences, language options, and voice diversity as it becomes available on their platform.</p>
+            <p>What else would you like to see us do with audio? How are you using Listen mode now? Sound off (on?) in the comments!</p>
+            <h3 style="margin: 20px;">Listener FAQ</h3>
+            <p>Is the audio player available in the mobile apps?</p>
+            <p>The player is now available in the iOS mobile app on the story screen. If you don’t see it yet, try updating to the newest version in the app store. As for Android, we’re looking to bring audio to that app too. We don’t have clear timing for that, but we’ll be sure to let you know when we do.</p>
+            <p>Why don’t I see the “Listen” button on a story?</p>
+            <p>The feature currently supports English text, so the “Listen” button may not appear if the post is not written in English.</p>
+            <p>Can I change the narrator’s voice and speed?</p>
+            <p>Yes. To change the playback speed, tap the “1x” button on the audio player. To change the narrator’s voice, tap the “…” button on the audio player, and then choose “Select a voice.”</p>
+            <p>Can I save stories to a list that automatically plays them aloud?</p>
+            <p>Not at this time. We’ve heard from many of you that it’s a feature you’d like to see, so it’s something we’re keeping in mind for future product updates.</p>
+        </div>
+        <div id="footer">
+        </div>
     </div>
     <script src="js/script.js"></script>
 </body>
+
 </html>
