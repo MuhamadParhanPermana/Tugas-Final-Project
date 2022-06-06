@@ -71,14 +71,65 @@ nav ul li a i {
     margin-bottom: 40px;
 }
 
-/* Content */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    margin: 10px;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
 
-#content {
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -6px;
+    top: -1px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Hamburger Menu Animations */
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked~span:nth-child(2) {
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked~span:nth-child(4) {
+    transform: rotate(-45deg) translate(-1px, 0px);
+}
+
+.menu-toggle input:checked~span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+/* Container */
+
+#container {
     padding: 8px;
     margin-left: 238px;
 }
 
-#content h2 {
+#container h2 {
     display: flex;
     font-size: 25px;
     color: white;
@@ -125,25 +176,25 @@ nav ul li a i {
 
 /* Body */
 
-#body-content {
+#body-container {
     display: flex;
     padding: 8px;
 }
 
-#body-content-pf {
-    display: grid;
-    position: relative;
+#body-container-pf {
+    display: flex;
+    flex-wrap: wrap;
     grid-template-columns: repeat(8, 1fr);
     padding: 10px;
 }
 
-.body-content-1 {
+.body-container-1 {
     flex: 1;
     flex-direction: column;
     padding: 8px;
 }
 
-.body-content-2 {
+.body-container-2 {
     flex: 2;
     padding: 8px;
 }
@@ -191,11 +242,9 @@ nav ul li a i {
 }
 
 .card {
-    width: 100%;
-    height: auto;
     grid-column: span 2;
-    margin: 10px 0;
-    position: relative;
+    justify-content: space-evenly;
+    margin: 8px;
 }
 
 .card-header {
@@ -236,7 +285,7 @@ nav ul li a i {
     font-weight: 600;
 }
 
-/* pc small */
+/* tablet */
 
 @media screen and (max-width: 992px) {
     nav {
@@ -271,16 +320,161 @@ nav ul li a i {
         size: 10px;
     }
 
-    #content {
+    #container {
+        padding-top: 80px;
         margin-left: 10px;
     }
-}
 
-/* tablet */
+    .card-header {
+        padding: 20px;
+        width: 150px;
+    }
 
-@media screen and (max-width: 768px){
+    .card-header img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .card-body {
+        padding: 20px;
+        width: 150px;
+    }
+
+    .body-container-1 {
+        flex: 2 !important;
+        flex-direction: column;
+        padding: 8px;
+    }
+
+    .body-container-2 {
+        flex: 1 !important;
+        padding: 8px;
+    }
 }
 
 /* Mobile */
 
-@media screen and (max-width: 576px) {}
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        position: absolute;
+        width: 70px;
+        height: 100vh;
+        padding-right: 20%;
+        right: 0;
+        top: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: black;
+        z-index: -1;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    nav ul.slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    nav ul li {
+        padding: 0px;
+    }
+    
+    nav ul li a {
+        display: flex;
+        width: 100%;
+        padding: 8px;
+        color: rgb(134, 143, 150);
+        font-size: 15px;
+        text-decoration: none;
+        transition: .4s;
+    }
+    
+    nav ul li a:hover,
+    nav a.active {
+        padding-left: 16px;
+        color: rgb(142, 195, 236);
+    }
+    
+    nav ul li a i {
+        margin-right: 20px;
+        size: 15px;
+    }
+
+    #header {
+        flex-direction: column;
+        padding-top: 100px;
+        align-items: center;
+    }
+    
+    #header img {
+        height: 220px;
+        width: 220px;
+        border-radius: 100%;
+        border-color: rgb(30, 30, 32);
+        border-style: solid;
+        border-width: 10px;
+    }
+    
+    #header h3 {
+        color: white;
+        margin-left: 15px;
+        margin-top: 30px;
+    }
+    
+    #header p {
+        flex-direction: row;
+        color: white;
+        padding: 8px;
+        width: max-content;
+        background-color: rgb(35, 38, 45);
+        margin-left: 15px;
+        margin-top: 22px;
+    }
+    
+    .bio {
+        display: flex;
+    }
+
+    .card-header {
+        padding: 20px;
+        width: 150px;
+    }
+
+    .card-header img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .card-body {
+        padding: 20px;
+        width: 150px;
+    }
+
+    #body-container {
+        display: flex;
+        padding: 8px;
+    }
+    
+    #body-container-pf {
+        display: flex;
+        flex-wrap: wrap;
+        grid-template-columns: repeat(8, 1fr);
+        padding: 10px;
+    }
+    
+    .body-container-1 {
+        flex: 1;
+        flex-direction: column;
+        padding: 8px;
+    }
+    
+    .body-container-2 {
+        flex: 2;
+        padding: 8px;
+    }
+}

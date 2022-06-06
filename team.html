@@ -10,9 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/style.css" />
     <style>
-        #content {
-            margin-right: 20px !important;
-            margin-left: 260px !important;
+        #container {
+            margin-right: 10px !important;
             padding-top: 100px;
             background-color: rgb(35, 38, 45) !important;
         }
@@ -39,15 +38,15 @@
             margin-top: 2px;
         }
 
-        #body-content {
+        #body-container {
             margin: 20px;
             background-color: rgb(30, 30, 32);
             color: white;
-            justify-content: center;
             flex-direction: column;
         }
 
-        #body-content-pf {
+        #body-container-pf {
+            justify-content: center;
             grid-template-columns: repeat(8, 1fr);
         }
     </style>
@@ -55,6 +54,12 @@
 
 <body>
     <nav>
+        <div class="menu-toggle">
+            <input type="checkbox">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <div class="judul">
             <h1 class="judul1">Port</h1>
             <h1 class="judul2">folio</h1>
@@ -68,8 +73,8 @@
             <li><a href="about.html"><i class="fa fa-info-circle"></i>About</a></li>
         </ul>
     </nav>
-    <div id="content">
-        <div id="body-content-pf">
+    <div id="container">
+        <div id="body-container-pf">
             <div class="card">
                 <div class="card-header" style="background-color: rgb(30,30,32); width: 200px">
                     <img src="images/zidan.jpg" style="border-radius: 100%;">
@@ -95,7 +100,7 @@
                 </div>
             </div>
         </div>
-        <div id="body-content">
+        <div id="body-container">
             <center>
                 <h1>Team</h1>
                 <p>2021 - 2022</p>
